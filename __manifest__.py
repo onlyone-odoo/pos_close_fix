@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 {
     "name": "POS Close Fix",
-    "summary": "Fix closePos in opening_control state to avoid get_order_list error",
+    "summary": "Fix closePos() in opening_control state (Odoo 18 EE + pos_hr)",
     "description": """
-        Patches PosStore to add return in opening_control for backend button in LoginScreen.
-        Compatible with Odoo 18 EE.
+        When using pos_hr and clicking "Backend" from LoginScreen with an advanced employee,
+        the session is in 'opening_control' state and push_orders fails with:
+        TypeError: this.get_order_list is not a function
+
+        This module patches PosStore.closePos() to properly handle opening_control
+        and redirect to backend without errors.
     """,
     "author": "Be OnlyOne",
     "maintainers": ["onlyone-odoo"],
