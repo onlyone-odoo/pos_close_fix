@@ -10,8 +10,8 @@
     "maintainers": ["onlyone-odoo"],
     "website": "https://onlyone.odoo.com/",
     "category": "Point of Sale",
-    "version": "18.0.1.0.0",
-    "depends": ["point_of_sale"],
+    "version": "18.0.1.0.1",
+    "depends": ["point_of_sale", "pos_hr"],
     "data": [],
     "assets": {
         "point_of_sale._assets_pos": [
