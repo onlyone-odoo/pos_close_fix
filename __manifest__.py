@@ -20,6 +20,7 @@
     "assets": {
         "point_of_sale._assets_pos": [
             "pos_close_fix/static/src/js/pos_hr_login_screen_patch.js",
+            "pos_close_fix/static/src/js/pos_store_patch.js",
         ],
     },
     "installable": True,
